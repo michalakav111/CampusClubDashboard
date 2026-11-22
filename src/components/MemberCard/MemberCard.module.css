@@ -3,41 +3,95 @@
    Don't delete the classes marked "REQUIRED BY THE TESTS". */
 
 /* the card - border, padding, shadow */
+
+
+/* the card */
 .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-/* REQUIRED BY THE TESTS: the card of the selected member */
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* selected member */
 .selected {
+  border: 2px solid #2563eb;
+  background-color: #eff6ff;
 }
 
-/* REQUIRED BY THE TESTS: an inactive member - the card looks faded */
+/* inactive member */
 .inactive {
+  opacity: 0.45;
 }
 
-/* a circle with the initials, same size for all */
+/* avatar */
 .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
-/* the member name */
+/* member name */
 .name {
+  margin: 5px 0;
+  font-size: 18px;
+  color: #1e293b;
 }
 
-/* the role badge */
+/* role badge */
 .badge {
+  font-size: 13px;
+  color: #64748b;
 }
 
-/* the small action button (disabled -> faded, no hover effect) */
+/* role button */
 .roleButton {
+  padding: 6px 15px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: default;
 }
 
-/* REQUIRED BY THE TESTS: the button of a Leader - blue */
+.roleButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.roleButton:disabled:hover {
+  filter: none;
+}
+
+/* Leader - blue */
 .leader {
+  background-color: #2563eb;
 }
 
-/* REQUIRED BY THE TESTS: the button of a Member - green */
+/* Member - green */
 .member {
+  background-color: #16a34a;
 }
 
-/* REQUIRED BY THE TESTS: the button of a Guest - purple */
+/* Guest - purple */
 .guest {
+  background-color: #9333ea;
 }

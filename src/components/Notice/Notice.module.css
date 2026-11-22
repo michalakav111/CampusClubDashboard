@@ -2,14 +2,27 @@
    Use them in Notice.jsx: className={styles.notice}
    Don't delete the classes marked "REQUIRED BY THE TESTS". */
 
-/* REQUIRED BY THE TESTS: the box */
+/* The notice box */
 .notice {
+  padding: 14px 18px;
+  margin: 15px 0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
 }
 
-/* REQUIRED BY THE TESTS: yellow background */
+/* Yellow warning */
 .warning {
+  background-color: #fef3c7;
+  border: 1px solid #f59e0b;
+  color: #92400e;
 }
 
-/* REQUIRED BY THE TESTS: blue background */
+/* Blue info */
 .info {
+  background-color: #dbeafe;
+  border: 1px solid #3b82f6;
+  color: #1e40af;
 }
